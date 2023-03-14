@@ -1,11 +1,16 @@
 import "./App.css";
-import List from "./Containers/List";
+import ListContainer from "./Containers/ListContainer";
+import { QueryClient, QueryClientProvider } from "react-query";
+
+const queryClient = new QueryClient();
 
 function App() {
   return (
-    <div className="App">
-      <List />
-    </div>
+    <QueryClientProvider client={queryClient}>
+      <div className="App">
+        <ListContainer />
+      </div>
+    </QueryClientProvider>
   );
 }
 
