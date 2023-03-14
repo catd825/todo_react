@@ -5,7 +5,7 @@ const List = (list: any) => {
     return <Task key={task.id} task={task} />;
   });
   return (
-    <div style={{ width: "300px" }}>
+    <div style={{border: '1px black solid'}}>
       List Name: {list["list"].name}
       {tasks}
     </div>
