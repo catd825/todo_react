@@ -1,8 +1,10 @@
-const List = (lists: any) => {
-    const getList = async () => {
-        console.log(lists)
+import List from "./List";
+
+const ListList = (lists: any) => {
+    const getList = () => {
+        return lists['lists'].map((list: any) => <List key={list.id} list={list}/>)
     }
-    console.log(lists)
-    return <>hi</>
+
+    return <>{getList()}</>
 };
-export default List;
+export default ListList;
