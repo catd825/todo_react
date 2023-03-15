@@ -1,13 +1,20 @@
+import Typography from "@mui/material/Typography";
+import moment from "moment";
+
 const Task = (task: any) => {
   return (
-    <div>
-      <ul>
-        Tasks
-        <li>task name: {task["task"].task}</li>
-        <li>to be completed by: {task["task"].to_be_completed_by}</li>
-        <li>completed: {String(task["task"].completed)}</li>
-      </ul>
-    </div>
+    <>
+      <Typography variant="h6" component="div">
+        {task["task"].task}
+      </Typography>
+      <Typography variant="body2">
+        to be completed:{" "}
+        {moment(task["task"].to_be_completed_by).format("YYYY-MM-DD")}
+      </Typography>
+      <Typography variant="body2">
+        completed: {String(task["task"].completed)}
+      </Typography>
+    </>
   );
 };
 
