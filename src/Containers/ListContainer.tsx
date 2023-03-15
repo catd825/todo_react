@@ -14,9 +14,9 @@ const ListContainer = () => {
   if (isLoading) return <div>Loading...</div>;
 
   return (
-    <>
-      <ListList lists={data}/>
-    </>
+    <div style={{ margin: "80px 20px 0px 20px" }}>
+      <ListList lists={data} />
+    </div>
   );
 };
 export default ListContainer;
